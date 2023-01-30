@@ -2,7 +2,7 @@ CS5500 - Project 1
 Kevin Cardenas, James Turner and Noah Rodgers
 
 1. Build and Run
-	In order to build and run our program, please save all our files into one folder, navigate to your terminal and run the command `make linkedlist`.
+	In order to build and run our program, please save all our files into one folde. Open your terminal and navigate to where you saved our folder, and run the command `make linkedlist`.
 	
 2. Pieces of the Assignment
 	In total, there are 4 files: Makefile, list_test.c, list.c, and list.h. The Makefile contains a script to compile our C files. The list.h file is a header file containing all of the functions. The list.c file contains the code for the functions outlined in list.h. Finally, list_test.c tests all of the functions writted in list.c. 
