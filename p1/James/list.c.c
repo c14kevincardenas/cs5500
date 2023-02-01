@@ -100,8 +100,13 @@ void flush_list(list* ll){
 /*completely destroys list and frees the memory*/
 void free_list(list* ll){
     node* current = ll->head; /*sets our current node*/
-
-    flush_list(ll);
+    node* next = current->next; /*node pointer points to next node*/
+    
+    while (current != NULL){
+        next = current->next;
+        free(current);
+        current = next;
+    }
 
     free(ll);
 
