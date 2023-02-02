@@ -19,6 +19,9 @@ typedef struct List {
 /*declares list name*/
 list* create_list();
 
+/*count nodes*/
+int length_of_list(list* ll);
+
 /*declare list to add nodes*/
 int add_to_list(list* ll, char* item);
 
@@ -33,6 +36,8 @@ void flush_list(list* ll);
 
 /*function to deallocate all memory used for lists and delete all nodes*/
 void free_list(list* ll);
+
+
 
 
 

@@ -2,7 +2,7 @@ CC = gcc
 
 OBJECTS = list.o test_list.o
 
-CFLAGS = -c -Wall -std=c99
+CFLAGS = -c -Wall
 
 RM = rm -f
 

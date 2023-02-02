@@ -7,7 +7,9 @@ int main()
 {
     list* list = create_list();
     
-    char item1 [] = "A"; /*gives a character to test*/
+    length_of_list(list);
+    
+    char item1 [] = "A";
     add_to_list(list, "A");
     
     char item2 [] = "B";
@@ -16,13 +18,13 @@ int main()
     char item3 [] = "C";
     add_to_list(list, "C");
     
-    /*remove_from_list(list);*/
-    
     print_list(list);
     
-    /*flush_list(list);*/
+    remove_from_list(list);
     
-    /*free_list(list);*/
+    flush_list(list);
+    
+    free_list(list);
     
     return 0;
 }
