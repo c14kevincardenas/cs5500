@@ -3,5 +3,5 @@ help:
 	@echo "- linkedlist"
 
 linkedlist:
-	gcc -Wall list_test.c list.c -o list_test; ./list_test
+	gcc -Wall -std=gnu99 list_test.c list.c -o list_test; ./list_test
 	@echo "Program 'linkedlist' compiled.\n"
