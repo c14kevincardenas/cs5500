@@ -103,11 +103,12 @@ void * producer_thread( void *arg )
 			if( List->header == NULL )
 			{
 				List->header = Local_List->header;
+				List->tail = Local_List->tail;
 			}
 			else
 			{
 				List->tail->next = Local_List->header;
-				List->tail = Local_List->header;
+				List->tail = Local_List->tail;
 			}                    
 			pthread_mutex_unlock(&mutex_lock);
 			break;
