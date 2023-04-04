@@ -76,13 +76,18 @@ int main(int argc, char *argv[])
 	pthread_t threads[NUM_THREADS];
 	int ret;
 	long t;
+	pthread_attr_t attr;
  
 	// initialize mutex
 	pthread_mutex_init(&mutex, NULL);
  
 	// read file
 	readf(fp);
-
+	
+	/* For portability, explicitly create threads in a joinable state */
+	pthread_attr_init(&attr);
+	pthread_attr_setdetachstate(&attr, PTHREAD_CREATE_JOINABLE);
+	
 	// create two threads to do work
 	for(t = 0; t < NUM_THREADS; t++){
 		printf("In main: creating thread %ld\n", t);
@@ -93,7 +98,10 @@ int main(int argc, char *argv[])
 		}
 	}
 	
-	sleep(1);
+	/* Wait for all threads to complete */
+	for (i = 0; i < NUM_THREADS; i++) {
+		pthread_join(threads[i], NULL);
+	}
 	
 	printf("The number of substrings is: %d\n", total);
 	
