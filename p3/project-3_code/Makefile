@@ -1,6 +1,8 @@
 help:
 	@echo "Available commands:"
 	@echo "- my-list-forming"
+	@echo "- substring-threads"
+	@echo "- substring-sequential"
 
 my-list-forming:
 	for name in my_list-forming_*.c ; do \
@@ -19,7 +21,11 @@ my-list-forming:
 	done
 
 
-test:
-	gcc my_list-forming_1.c -o my_list-forming -pthread -D_GNU_SOURCE
-	
-	./my_list-forming 2 200
+substring-threads:
+	gcc -pthread -g substring_threads.c -o substring_threads
+	./substring_threads
+
+
+substring-sequential:
+	gcc -g substring_sequential.c -o substring_sequential
+	./substring_sequential
