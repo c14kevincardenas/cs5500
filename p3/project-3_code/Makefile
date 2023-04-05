@@ -29,3 +29,7 @@ substring-threads:
 substring-sequential:
 	gcc -g substring_sequential.c -o substring_sequential
 	./substring_sequential
+
+condition-variable:
+	gcc -g -pthread condvars.c -o condvars
+	./condvars
