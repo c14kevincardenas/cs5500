@@ -3,6 +3,7 @@ help:
 	@echo "- my-list-forming"
 	@echo "- substring-threads"
 	@echo "- substring-sequential"
+	@echo "- condition-variable"
 
 my-list-forming:
 	for name in my_list-forming_*.c ; do \
