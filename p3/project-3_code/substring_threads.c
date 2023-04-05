@@ -74,7 +74,7 @@ int main(int argc, char *argv[])
 {
 	// declare variables
 	pthread_t threads[NUM_THREADS];
-	int ret;
+	int ret, i;
 	long t;
 	pthread_attr_t attr;
  
@@ -103,6 +103,7 @@ int main(int argc, char *argv[])
 		pthread_join(threads[i], NULL);
 	}
 	
+	printf("String 1: %sString 2: %s", s1, s2);
 	printf("The number of substrings is: %d\n", total);
 	
 	/* Last thing that main() should do */
